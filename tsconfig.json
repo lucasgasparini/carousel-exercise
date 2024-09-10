@@ -12,15 +12,26 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "types": ["@testing-library/jest-dom", "node"],
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/app/components/*"],
+      "@/atoms/*": ["./src/app/components/atoms/*"],
+      "@/molecules/*": ["./src/app/components/molecules/*"],
+      "@/organisms/*": ["./src/app/components/organisms/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "jest.setup.js"
+  ],
   "exclude": ["node_modules"]
 }

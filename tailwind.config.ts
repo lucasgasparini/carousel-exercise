@@ -13,8 +13,23 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      animation: {
+        "slide-next": "slideNext 0.5s ease-in-out",
+        "slide-prev": "slidePrev 0.5s ease-in-out",
+      },
+      keyframes: {
+        slideNext: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        slidePrev: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+      },
     },
   },
   plugins: [],
 };
+
 export default config;
